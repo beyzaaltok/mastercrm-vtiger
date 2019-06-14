@@ -48,6 +48,7 @@ $dbconfig['db_server'] = 'mariadb';
 $dbconfig['db_port'] = ':3306';
 $dbconfig['db_username'] = 'root';
 include 'db_pass.php';
+$dbconfig['db_password'] = $dbpass; 
 $dbconfig['db_name'] = 'vtiger_crm';
 $dbconfig['db_type'] = 'mysqli';
 $dbconfig['db_status'] = 'true';
