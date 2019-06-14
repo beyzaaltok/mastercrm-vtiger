@@ -47,7 +47,7 @@ $HELPDESK_SUPPORT_EMAIL_REPLY_ID = $HELPDESK_SUPPORT_EMAIL_ID;
 $dbconfig['db_server'] = 'mariadb';
 $dbconfig['db_port'] = ':3306';
 $dbconfig['db_username'] = 'root';
-$dbconfig['db_password'] = 'admin';
+include 'db_pass.php';
 $dbconfig['db_name'] = 'vtiger_crm';
 $dbconfig['db_type'] = 'mysqli';
 $dbconfig['db_status'] = 'true';
