@@ -1,13 +1,13 @@
--- MySQL dump 10.13  Distrib 5.7.25, for Linux (x86_64)
+-- MySQL dump 10.16  Distrib 10.1.38-MariaDB, for debian-linux-gnu (x86_64)
 --
--- Host: localhost    Database: vtiger_crm
+-- Host: mariadb    Database: vtiger_crm
 -- ------------------------------------------------------
--- Server version	5.7.25-0ubuntu0.18.04.2-log
+-- Server version	10.1.38-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -5366,7 +5366,7 @@ CREATE TABLE `vtiger_group2role` (
 
 LOCK TABLES `vtiger_group2role` WRITE;
 /*!40000 ALTER TABLE `vtiger_group2role` DISABLE KEYS */;
-INSERT INTO `vtiger_group2role` VALUES (3,'H2'),(4,'H3'),(2,'H4');
+INSERT INTO `vtiger_group2role` VALUES (2,'H4'),(3,'H2'),(4,'H3');
 /*!40000 ALTER TABLE `vtiger_group2role` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5392,7 +5392,7 @@ CREATE TABLE `vtiger_group2rs` (
 
 LOCK TABLES `vtiger_group2rs` WRITE;
 /*!40000 ALTER TABLE `vtiger_group2rs` DISABLE KEYS */;
-INSERT INTO `vtiger_group2rs` VALUES (3,'H3'),(4,'H3'),(2,'H5');
+INSERT INTO `vtiger_group2rs` VALUES (2,'H5'),(3,'H3'),(4,'H3');
 /*!40000 ALTER TABLE `vtiger_group2rs` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -7244,7 +7244,7 @@ CREATE TABLE `vtiger_mailscanner_ids` (
   `messageid` varchar(512) DEFAULT NULL,
   `crmid` int(11) DEFAULT NULL,
   `refids` text,
-  KEY `scanner_message_ids_idx` (`scannerid`,`messageid`),
+  KEY `scanner_message_ids_idx` (`scannerid`,`messageid`(255)),
   KEY `messageids_crmid_idx` (`crmid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -7949,7 +7949,7 @@ CREATE TABLE `vtiger_org_share_action2tab` (
 
 LOCK TABLES `vtiger_org_share_action2tab` WRITE;
 /*!40000 ALTER TABLE `vtiger_org_share_action2tab` DISABLE KEYS */;
-INSERT INTO `vtiger_org_share_action2tab` VALUES (0,2),(1,2),(2,2),(3,2),(0,4),(1,4),(2,4),(3,4),(0,6),(1,6),(2,6),(3,6),(0,7),(1,7),(2,7),(3,7),(0,8),(1,8),(2,8),(3,8),(0,9),(1,9),(2,9),(3,9),(0,10),(1,10),(2,10),(3,10),(0,13),(1,13),(2,13),(3,13),(0,14),(1,14),(2,14),(3,14),(0,16),(1,16),(2,16),(3,16),(0,18),(1,18),(2,18),(3,18),(0,20),(1,20),(2,20),(3,20),(0,21),(1,21),(2,21),(3,21),(0,22),(1,22),(2,22),(3,22),(0,23),(1,23),(2,23),(3,23),(0,26),(1,26),(2,26),(3,26),(0,30),(1,30),(2,30),(3,30),(0,36),(1,36),(2,36),(3,36),(0,37),(1,37),(2,37),(3,37),(0,40),(1,40),(2,40),(3,40),(0,41),(1,41),(2,41),(3,41),(0,42),(1,42),(2,42),(3,42),(0,44),(1,44),(2,44),(3,44),(0,45),(1,45),(2,45),(3,45),(0,48),(1,48),(2,48),(3,48);
+INSERT INTO `vtiger_org_share_action2tab` VALUES (0,2),(0,4),(0,6),(0,7),(0,8),(0,9),(0,10),(0,13),(0,14),(0,16),(0,18),(0,20),(0,21),(0,22),(0,23),(0,26),(0,30),(0,36),(0,37),(0,40),(0,41),(0,42),(0,44),(0,45),(0,48),(1,2),(1,4),(1,6),(1,7),(1,8),(1,9),(1,10),(1,13),(1,14),(1,16),(1,18),(1,20),(1,21),(1,22),(1,23),(1,26),(1,30),(1,36),(1,37),(1,40),(1,41),(1,42),(1,44),(1,45),(1,48),(2,2),(2,4),(2,6),(2,7),(2,8),(2,9),(2,10),(2,13),(2,14),(2,16),(2,18),(2,20),(2,21),(2,22),(2,23),(2,26),(2,30),(2,36),(2,37),(2,40),(2,41),(2,42),(2,44),(2,45),(2,48),(3,2),(3,4),(3,6),(3,7),(3,8),(3,9),(3,10),(3,13),(3,14),(3,16),(3,18),(3,20),(3,21),(3,22),(3,23),(3,26),(3,30),(3,36),(3,37),(3,40),(3,41),(3,42),(3,44),(3,45),(3,48);
 /*!40000 ALTER TABLE `vtiger_org_share_action2tab` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -11153,7 +11153,7 @@ CREATE TABLE `vtiger_salesmanactivityrel` (
 
 LOCK TABLES `vtiger_salesmanactivityrel` WRITE;
 /*!40000 ALTER TABLE `vtiger_salesmanactivityrel` DISABLE KEYS */;
-INSERT INTO `vtiger_salesmanactivityrel` VALUES (7,9),(6,17),(8,19),(8,22),(5,27),(7,29),(8,30),(7,36),(8,40);
+INSERT INTO `vtiger_salesmanactivityrel` VALUES (5,27),(6,17),(7,9),(7,29),(7,36),(8,19),(8,22),(8,30),(8,40);
 /*!40000 ALTER TABLE `vtiger_salesmanactivityrel` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -11421,7 +11421,7 @@ CREATE TABLE `vtiger_seactivityrel` (
 
 LOCK TABLES `vtiger_seactivityrel` WRITE;
 /*!40000 ALTER TABLE `vtiger_seactivityrel` DISABLE KEYS */;
-INSERT INTO `vtiger_seactivityrel` VALUES (7,9),(16,17),(23,19),(23,22),(25,27),(33,29),(7,30),(35,36),(38,40);
+INSERT INTO `vtiger_seactivityrel` VALUES (7,9),(7,30),(16,17),(23,19),(23,22),(25,27),(33,29),(35,36),(38,40);
 /*!40000 ALTER TABLE `vtiger_seactivityrel` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -11574,7 +11574,7 @@ CREATE TABLE `vtiger_senotesrel` (
 
 LOCK TABLES `vtiger_senotesrel` WRITE;
 /*!40000 ALTER TABLE `vtiger_senotesrel` DISABLE KEYS */;
-INSERT INTO `vtiger_senotesrel` VALUES (7,12),(7,13),(18,20),(24,20),(18,21),(24,21),(25,26),(28,31),(34,31),(28,32),(34,32);
+INSERT INTO `vtiger_senotesrel` VALUES (7,12),(7,13),(18,20),(18,21),(24,20),(24,21),(25,26),(28,31),(28,32),(34,31),(34,32);
 /*!40000 ALTER TABLE `vtiger_senotesrel` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -14541,4 +14541,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-06-14 12:52:16
+-- Dump completed on 2019-06-16 20:50:15
