@@ -3,7 +3,6 @@
 # Robot Exclusion File -- robots.txt
 # Author:  vtiger CRM
 # Last Updated:  17/11/06
-# Test commit
 # ------------------------------------------
 
 User-agent: *
