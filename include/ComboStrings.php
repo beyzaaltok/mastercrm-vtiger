@@ -112,6 +112,7 @@ $combo_strings = Array(
                 , 'Mrs.'=>'Mrs.'
                 , 'Dr.'=>'Dr.'
                 , 'Prof.'=>'Prof.'
+		, 'Test.'=>'Test.'
                 ),
 'eventstatus_dom' => Array('Planned'=>'Planned'
                 , 'Held'=>'Held'
